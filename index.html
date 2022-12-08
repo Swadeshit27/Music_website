@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scaleongItemplay.0"
+    />
+    <title>Song website</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="responsive.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2ongItemplay/css/all.min.css"
+  />
+
+  <body>
+    <div class="container">
+      <!-- ========= navbar section start ============-->
+      <div class="navsection">
+        <div class="navbar" id="nav">
+          <div class="navbar-toggle" id="toggle" onclick="clicked()">
+            <span></span>
+          </div>
+          <div class="logo">
+            <a href="#"><i>Music</i> hub.com</a>
+          </div>
+          <div class="all">
+            <ul class="top">
+              <li class="items">
+                <a href="#" class="fa fa-home home"><span>home</span></a>
+              </li>
+              <li class="items">
+                <a href="#" class="fa fa-search"><span>browse</span></a>
+              </li>
+              <li class="items">
+                <a href="#" class="fa fa-microphone"> <span>radio</span></a>
+              </li>
+            </ul>
+            <ul class="library">
+              <h3>your library</h3>
+              <li class="items">
+                <a href="#" class="fa fa-regular fa-clock"
+                  ><span>recently played</span></a
+                >
+              </li>
+              <li class="items">
+                <a href="#" class="fa fa-heart"><span>favorite songs</span></a>
+              </li>
+              <li class="items">
+                <a href="#" class="fa fa-user"> <span>artist</span></a>
+              </li>
+              <li class="items">
+                <a href="#" class="fa fa-regular fa-list">
+                  <span>albums</span></a
+                >
+              </li>
+            </ul>
+            <ul class="playlist">
+              <h3>playlist</h3>
+              <li class="items">
+                <a href="#" class="fa fa-music"><span>hindi top 50</span></a>
+              </li>
+              <li class="items">
+                <a href="#" class="fa fa-music"><span>bengali top 50</span></a>
+              </li>
+              <li class="items">
+                <a href="#" class="fa fa-music"><span>romantic songs</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- ========= navbar section end ============-->
+      <div class="main">
+        <!-- ========= tools section start ============-->
+        <div class="tools">
+          <div class="search">
+            <i class="fa fa-search"></i>
+            <input
+              type="text"
+              name="search"
+              class="search_bar"
+              placeholder="search for songs, artist etc....."
+            />
+            <!-- <button>submit</button> -->
+          </div>
+          <div class="setting">
+            <p class="fa fa-cog fa-spin"></p>
+          </div>
+          <!-- <div class="notification">
+                <p class="fa fa-notice"></p>
+            </div> -->
+          <div class="mode">
+            <i class="fas"></i>
+          </div>
+        </div>
+        <!-- ========= tools section end ============-->
+        <!-- ========= display section start ============-->
+        <div class="display">
+          <div class="main-song">
+            <img class="none" id="rotation" src="Images/1.jpg" alt="" />
+            <h3 class="currSongName">bandyea</h3>
+            <p class="currArtistName">by arijit sing</p>
+          </div>
+          <div class="featured">
+            <div class="header">
+              <h3>favorite songs</h3>
+            </div>
+            <!-- <div class="forward-backword">
+              <i class="fa forward-arrow fa-backward"></i>
+              <i class="fa backward-arrow fa-forward"></i>
+            </div> -->
+          </div>
+        </div>
+        <!-- ========= display section end ============-->
+        <!-- ========= songs section start ============-->
+        <div class="songItems">
+          <div class="rest">
+            <img class="songItemplay" alt="" id="1" />
+            <h4 class="musicName">none</h4>
+            <p class="artist">by arijit sing</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="2" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by arijit sing</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="3" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="4" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="5" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="6" />
+            <h4 class="musicName">bandyaaakfkdlfdisfs</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="7" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="8" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="9" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="10" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="11" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="12" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="13" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="14" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <div class="rest">
+            <img class="songItemplay" alt="" id="15" />
+            <h4 class="musicName">bandyaa</h4>
+            <p class="artist">by Armaan Malik</p>
+          </div>
+          <!-- <div class="rest">  
+              <img class="songItemplay" alt="" id="7" >
+              <h4 class="musicName" >bandyaa</h4>
+              <p class="artist">by Armaan Malik</p> 
+            </div>
+            <div class="rest">  
+              <img class="songItemplay" alt="" id="7" >
+              <h4 class="musicName" >bandyaa</h4>
+              <p class="artist">by Armaan Malik</p> 
+            </div> -->
+        </div>
+        <!-- ========= songs section end ============-->
+
+        <!-- ========= play section start ============-->
+        <div class="player">
+          <div class="photo" id="player_rotate">
+            <img class="photo" src="Images/1.jpg" alt="" />
+          </div>
+
+          <div class="control">
+            <div class="play-pause-for-back">
+              <i class="fa-solid fa-backward-step" id="previous"></i>
+              <!-- <i class="fa-solid fa-play"></i> -->
+              <i class="fa-solid fa-circle-play" id="play_btn"></i>
+              <i class="fa-solid fa-forward-step" id="next"></i>
+            </div>
+            <div class="time-bar">
+              <p class="currtime">0.00</p>
+              <div class="musicbar">
+                <input
+                  type="range"
+                  name="progress"
+                  id="mybar"
+                  min="0"
+                  value="0"
+                  max="100"
+                />
+                <div class="bar2"></div>
+                <div class="dot"></div>
+              </div>
+              <p class="totaltime">5.30</p>
+              <!-- </div> -->
+              <!-- <div class="vol-sound"> -->
+              <i class="fa-solid fa-volume-high" id="vol_icon"></i>
+              <div class="soundbar">
+                <input
+                  type="range"
+                  name="progress"
+                  id="vol"
+                  min="0"
+                  value="0"
+                  max="100"
+                />
+                <div class="bar3"></div>
+                <div class="dot1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ========= play section end ============-->
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/1a8bb9f0cc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
