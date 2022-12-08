@@ -68,7 +68,7 @@ let songs = [
     { songname: "bandyea", artist: "by Arijit sing", path: "songs/1.mp3", coverimg: "Images/1.jpg" },
     { songname: "Hangover", artist: "by Salman khan & shreya ghoshal", path: "songs/2.mp3", coverimg: "Images/2.jpg" },
     { songname: "ButtaBomma ", artist: "by Armaan Malik", path: "songs/3.mp3", coverimg: "Images/3.jpg" },
-    { songname: "Ramuloo Ramulaa", artist: "by Armaan Malik", path: "songs/4.mp3", coverimg: "/Images/4.jpg" },
+    { songname: "Ramuloo Ramulaa", artist: "by Armaan Malik", path: "songs/4.mp3", coverimg: "Images/4.jpg" },
     { songname: "Barsaat Ki Dhun", artist: "by Jubin Nautial", path: "songs/5.mp3", coverimg: "Images/5.jpg" },
     { songname: "Paani Paani", artist: "by Badsha", path: "songs/6.mp3", coverimg: "Images/6.jpg" },
     { songname: "Bam Bholle", artist: "by unknown", path: "songs/7.mp3", coverimg: "Images/7.jpg" },
