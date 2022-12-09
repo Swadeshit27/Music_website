@@ -3,78 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scaleongItemplay.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎵 Song website</title>
+    <link rel="stylesheet" href="demo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Song website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2ongItemplay/css/all.min.css"
+    />
   </head>
-  <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-  <link rel="stylesheet" href="responsive.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2ongItemplay/css/all.min.css"
-  />
-
   <body>
     <div class="container">
       <!-- ========= navbar section start ============-->
-      <div class="navsection">
-        <div class="navbar" id="nav">
-          <div class="navbar-toggle" id="toggle" onclick="clicked()">
-            <span></span>
-          </div>
-          <div class="logo">
-            <a href="#"><i>Music</i> hub.com</a>
-          </div>
-          <div class="all">
-            <ul class="top">
-              <li class="items">
-                <a href="#" class="fa fa-home home"><span>home</span></a>
-              </li>
-              <li class="items">
-                <a href="#" class="fa fa-search"><span>browse</span></a>
-              </li>
-              <li class="items">
-                <a href="#" class="fa fa-microphone"> <span>radio</span></a>
-              </li>
-            </ul>
-            <ul class="library">
-              <h3>your library</h3>
-              <li class="items">
-                <a href="#" class="fa fa-regular fa-clock"
-                  ><span>recently played</span></a
-                >
-              </li>
-              <li class="items">
-                <a href="#" class="fa fa-heart"><span>favorite songs</span></a>
-              </li>
-              <li class="items">
-                <a href="#" class="fa fa-user"> <span>artist</span></a>
-              </li>
-              <li class="items">
-                <a href="#" class="fa fa-regular fa-list">
-                  <span>albums</span></a
-                >
-              </li>
-            </ul>
-            <ul class="playlist">
-              <h3>playlist</h3>
-              <li class="items">
-                <a href="#" class="fa fa-music"><span>hindi top 50</span></a>
-              </li>
-              <li class="items">
-                <a href="#" class="fa fa-music"><span>bengali top 50</span></a>
-              </li>
-              <li class="items">
-                <a href="#" class="fa fa-music"><span>romantic songs</span></a>
-              </li>
-            </ul>
-          </div>
+      <div class="navbar" id="nav">
+        <div class="navbar-toggle" id="toggle" onclick="clicked()">
+          <span></span>
+        </div>
+        <div class="logo">
+          <a href="#"><i>Music</i> hub.com</a>
+        </div>
+        <div class="all">
+          <ul class="top">
+            <li class="items">
+              <a href="#" class="fa fa-home home"><span>home</span></a>
+            </li>
+            <li class="items">
+              <a href="#" class="fa fa-search"><span>browse</span></a>
+            </li>
+            <li class="items">
+              <a href="#" class="fa fa-microphone"> <span>radio</span></a>
+            </li>
+          </ul>
+          <ul class="library">
+            <h3>your library</h3>
+            <li class="items">
+              <a href="#" class="fa fa-regular fa-clock"
+                ><span>recently played</span></a
+              >
+            </li>
+            <li class="items">
+              <a href="#" class="fa fa-heart"><span>favorite songs</span></a>
+            </li>
+            <li class="items">
+              <a href="#" class="fa fa-user"> <span>artist</span></a>
+            </li>
+            <li class="items">
+              <a href="#" class="fa fa-regular fa-list"> <span>albums</span></a>
+            </li>
+          </ul>
+          <ul class="playlist">
+            <h3>playlist</h3>
+            <li class="items">
+              <a href="#" class="fa fa-music"><span>hindi top 50</span></a>
+            </li>
+            <li class="items">
+              <a href="#" class="fa fa-music"><span>bengali top 50</span></a>
+            </li>
+            <li class="items">
+              <a href="#" class="fa fa-music"><span>romantic songs</span></a>
+            </li>
+          </ul>
         </div>
       </div>
       <!-- ========= navbar section end ============-->
@@ -113,10 +104,10 @@
             <div class="header">
               <h3>favorite songs</h3>
             </div>
-            <!-- <div class="forward-backword">
-              <i class="fa forward-arrow fa-backward"></i>
-              <i class="fa backward-arrow fa-forward"></i>
-            </div> -->
+            <div class="forward-backword">
+              <i class="fas fa-arrow-circle-left" id="backward-arrow"></i>
+              <i class="fas fa-arrow-circle-right" id="forward-arrow"></i>
+            </div>
           </div>
         </div>
         <!-- ========= display section end ============-->
@@ -197,49 +188,59 @@
             <h4 class="musicName">bandyaa</h4>
             <p class="artist">by Armaan Malik</p>
           </div>
-          <!-- <div class="rest">  
-              <img class="songItemplay" alt="" id="7" >
-              <h4 class="musicName" >bandyaa</h4>
-              <p class="artist">by Armaan Malik</p> 
-            </div>
-            <div class="rest">  
-              <img class="songItemplay" alt="" id="7" >
-              <h4 class="musicName" >bandyaa</h4>
-              <p class="artist">by Armaan Malik</p> 
-            </div> -->
         </div>
-        <!-- ========= songs section end ============-->
+      </div>
+      <!-- ========= songs section end ============-->
+      <!-- ========= play section start ============-->
+      <div class="player">
+        <div class="photo" id="player_rotate">
+          <img class="photo" src="Images/1.jpg" alt="" />
+        </div>
 
-        <!-- ========= play section start ============-->
-        <div class="player">
-          <div class="photo" id="player_rotate">
-            <img class="photo" src="Images/1.jpg" alt="" />
-          </div>
-
-          <div class="control">
+        <div class="control">
+          <div class="play-pause-repeat-vol">
+            <div class="repeat1">
+              <i class="fa-solid repeat fa-repeat" id="repeat-icon2"></i>
+            </div>
             <div class="play-pause-for-back">
               <i class="fa-solid fa-backward-step" id="previous"></i>
-              <!-- <i class="fa-solid fa-play"></i> -->
               <i class="fa-solid fa-circle-play" id="play_btn"></i>
               <i class="fa-solid fa-forward-step" id="next"></i>
             </div>
-            <div class="time-bar">
-              <p class="currtime">0.00</p>
-              <div class="musicbar">
+            <div class="vol-sound" id="soundbar">
+              <i class="fa-solid fa-volume-high" id="vol_icon"></i>
+              <div class="soundbar">
                 <input
                   type="range"
                   name="progress"
-                  id="mybar"
+                  id="vol"
                   min="0"
                   value="0"
                   max="100"
                 />
-                <div class="bar2"></div>
-                <div class="dot"></div>
+                <div class="bar3"></div>
+                <div class="dot1"></div>
               </div>
-              <p class="totaltime">5.30</p>
-              <!-- </div> -->
-              <!-- <div class="vol-sound"> -->
+            </div>
+          </div>
+          <div class="time-bar">
+            <p class="currtime">0.00</p>
+            <div class="musicbar">
+              <input
+                type="range"
+                name="progress"
+                id="mybar"
+                min="0"
+                value="0"
+                max="100"
+              />
+              <div class="bar2"></div>
+              <div class="dot"></div>
+            </div>
+            <p class="totaltime">5.30</p>
+            <i class="fa-solid repeat fa-repeat" id="repeat-icon1"></i>
+            <!-- </div> -->
+            <div class="vol-sound" id="soundbar2">
               <i class="fa-solid fa-volume-high" id="vol_icon"></i>
               <div class="soundbar">
                 <input
@@ -256,8 +257,8 @@
             </div>
           </div>
         </div>
-        <!-- ========= play section end ============-->
       </div>
+      <!-- ========= play section end ============-->
     </div>
     <script
       src="https://kit.fontawesome.com/1a8bb9f0cc.js"
