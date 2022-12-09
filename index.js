@@ -22,17 +22,19 @@ window.addEventListener("load", () => {
 function clicked(){
     var x=document.getElementById("nav");
     var y = document.getElementById("toggle");
-    if(x.style.width=='0px'){
-        x.style.width ='15rem';
+    if (x.style.left =='-20rem'){
+        // x.style.position = 'absolute';
+        x.style.left ='0';
+        x.style.height ='100%';
         y.style.position ='relative';
-        y.style.left ='9rem';
-        y.style.top ='1.2rem';
+        y.style.left ='10rem';
+        y.style.top ='1rem';
     }
     else {
-        x.style.width='0px';
+        x.style.left='-20rem';
         y.style.position = 'relative';
-        y.style.left = '2rem';
-        y.style.top = '2rem';
+        y.style.left = '21rem';
+        y.style.top = '1rem';
     }
 }
 
@@ -56,8 +58,6 @@ let rotation_img = document.getElementById('rotation');
 let player_img = document.getElementById('player_rotate');
 let songItems = Array.from(document.getElementsByClassName('rest'));
 let display_img = document.getElementsByClassName("none");
-let forwardArrow = document.getElementsByClassName("forward-arrow");
-let backwardArrow = document.getElementsByClassName("backward-arrow");
 let songsDisplay = document.getElementsByClassName("songItems")[0];
 let currTime = document.getElementsByClassName('currtime');
 let totalTime = document.getElementsByClassName('totaltime');
@@ -101,13 +101,6 @@ play_Button.addEventListener('click', () => {
         rotation_img.classList.add('rotate');
         player_img.classList.add('rotate');
     }
-    else if(audioElement.currentTime==audioElement.duration){
-        audioElement.pause();
-        play_Button.classList.remove('fa-circle-pause');
-        play_Button.classList.add('fa-circle-play');
-        rotation_img.classList.remove('rotate');
-        player_img.classList.remove('rotate');
-    }
     else {
         audioElement.pause();
         play_Button.classList.remove('fa-circle-pause');
@@ -115,6 +108,21 @@ play_Button.addEventListener('click', () => {
         rotation_img.classList.remove('rotate');
         player_img.classList.remove('rotate');
     }
+})
+
+/* ---------------- upadate songs after ended --------------------*/
+audioElement.addEventListener('ended', () => {
+    if (songindex >= 15) {
+        songindex = 0;
+    }
+    songindex++;
+    audioElement.src = `songs/${songindex}.mp3`;
+    display_img[0].src = `Images/${songindex}.jpg`;
+    document.getElementsByClassName('photo')[1].src = `Images/${songindex}.jpg`;
+    currSongName[0].innerText = songs[songindex - 1].songname;
+    currArtistName[0].innerText = songs[songindex - 1].artist;
+    rotation_img.classList.add('rotate');
+    audioElement.play();
 })
 
 /*----------------- update progress bar ------------------*/
@@ -225,13 +233,14 @@ document.getElementById('previous').addEventListener('click', () => {
 })
 
 /*----------- scroll music left or right ------------*/
-
-// forwardArrow.addEventListener('click',()=>{
-//     songsDisplay.scrollLeft+=100;
-// })
-// backwardArrow.addEventListener('click',()=>{
-//     songsDisplay.scrollLeft-=1075;
-// })
+let forwardArrow = document.getElementById("forward-arrow");
+let backwardArrow = document.getElementById("backward-arrow");
+forwardArrow.addEventListener('click',()=>{
+    document.getElementsByClassName('songItems')[0].scrollLeft += 300;
+})
+backwardArrow.addEventListener('click',()=>{
+    document.getElementsByClassName('songItems')[0].scrollLeft -= 300;
+})
 
 /*------------ sound update--------------*/
 let vol_icon = document.getElementById('vol_icon');
