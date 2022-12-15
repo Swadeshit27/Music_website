@@ -26,6 +26,7 @@ function clicked(){
         // x.style.position = 'absolute';
         x.style.left ='0';
         x.style.height ='100%';
+        x.style.transition='all .5s linear';
         y.style.position ='relative';
         y.style.left ='10rem';
         y.style.top ='1rem';
@@ -33,8 +34,9 @@ function clicked(){
     else {
         x.style.left='-20rem';
         y.style.position = 'relative';
-        y.style.left = '21rem';
-        y.style.top = '1rem';
+        x.style.transition = 'none';
+        y.style.left = '20.5rem';
+        y.style.top = '11px';
     }
 }
 
