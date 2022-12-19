@@ -68,33 +68,33 @@ let vol = document.getElementById('vol');
 
 /* ------------- all music array ---------------------*/
 let songs = [
-    { id:"1", songname: "bandyea", artist: "by Arijit sing", path: "songs/1.mp3", coverimg: "Images/1.jpg" },
-    { id:"2", songname: "Hangover", artist: "by Salman khan & shreya ghoshal", path: "songs/2.mp3", coverimg: "Images/2.jpg" },
-    { id:"3", songname: "ButtaBomma ", artist: "by Armaan Malik", path: "songs/3.mp3", coverimg: "Images/3.jpg" },
-    { id:"4", songname: "Ramuloo Ramulaa", artist: "by Armaan Malik", path: "songs/4.mp3", coverimg: "Images/4.jpg" },
-    { id:"5", songname: "Barsaat Ki Dhun", artist: "by Jubin Nautial", path: "songs/5.mp3", coverimg: "Images/5.jpg" },
-    { id:"6", songname: "Paani Paani", artist: "by Badsha", path: "songs/6.mp3", coverimg: "Images/6.jpg" },
-    { id:"7", songname: "Bam Bholle", artist: "by unknown", path: "songs/7.mp3", coverimg: "Images/7.jpg" },
-    { id:"8", songname: "Dheere Dheere", artist: "by Honey sing", path: "songs/8.mp3", coverimg: "Images/8.jpg" },
-    { id:"9", songname: "Waareya", artist: "by Palak Muchaal", path: "songs/9.mp3", coverimg: "Images/9.jpg" },
-    { id:"10", songname: "Titli", artist: "by unknown", path: "songs/10.mp3", coverimg: "Images/10.jpg" },
-    { id:"11", songname: "Zindagi Bana Loon", artist: "by unknown", path: "songs/11.mp3", coverimg: "Images/11.jpg" },
-    { id:"12", songname: "Tera Rastaa Chhodoon Na", artist: "by unknown", path: "songs/12.mp3", coverimg: "Images/12.jpg" },
-    { id:"13", songname: "tera yaar hoon main", artist: "by unknown", path: "songs/13.mp3", coverimg: "Images/13.jpg" },
-    { id:"14", songname: "Thoda Thoda Pyaar", artist: "by unknown", path: "songs/14.mp3", coverimg: "Images/14.jpg" },
-    { id:"15", songname: "Meri Maa Ke Barabar", artist: "by Jubin Nautial", path: "songs/15.mp3", coverimg: "Images/15.jpg" },
+    { id: "1", songname: "bandyea", artist: "by Arijit sing", path: "songs/1.mp3", coverimg: "Images/1.jpg" },
+    { id: "2", songname: "Hangover", artist: "by Salman khan & shreya ghoshal", path: "songs/2.mp3", coverimg: "Images/2.jpg" },
+    { id: "3", songname: "ButtaBomma ", artist: "by Armaan Malik", path: "songs/3.mp3", coverimg: "Images/3.jpg" },
+    { id: "4", songname: "Ramuloo Ramulaa", artist: "by Armaan Malik", path: "songs/4.mp3", coverimg: "Images/4.jpg" },
+    { id: "5", songname: "Barsaat Ki Dhun", artist: "by Jubin Nautial", path: "songs/5.mp3", coverimg: "Images/5.jpg" },
+    { id: "6", songname: "Paani Paani", artist: "by Badsha", path: "songs/6.mp3", coverimg: "Images/6.jpg" },
+    { id: "7", songname: "Bam Bholle", artist: "by unknown", path: "songs/7.mp3", coverimg: "Images/7.jpg" },
+    { id: "8", songname: "Dheere Dheere", artist: "by Honey sing", path: "songs/8.mp3", coverimg: "Images/8.jpg" },
+    { id: "9", songname: "Waareya", artist: "by Palak Muchaal", path: "songs/9.mp3", coverimg: "Images/9.jpg" },
+    { id: "10", songname: "Titli", artist: "by unknown", path: "songs/10.mp3", coverimg: "Images/10.jpg" },
+    { id: "11", songname: "Zindagi Bana Loon", artist: "by unknown", path: "songs/11.mp3", coverimg: "Images/11.jpg" },
+    { id: "12", songname: "Tera Rastaa Chhodoon Na", artist: "by unknown", path: "songs/12.mp3", coverimg: "Images/12.jpg" },
+    { id: "13", songname: "tera yaar hoon main", artist: "by unknown", path: "songs/13.mp3", coverimg: "Images/13.jpg" },
+    { id: "14", songname: "Thoda Thoda Pyaar", artist: "by unknown", path: "songs/14.mp3", coverimg: "Images/14.jpg" },
+    { id: "15", songname: "Meri Maa Ke Barabar", artist: "by Jubin Nautial", path: "songs/15.mp3", coverimg: "Images/15.jpg" },
 ]
 
 
 /*-------------search button ---------------------*/
 
 let search_result = document.getElementsByClassName('search_result')[0];
-songs.forEach(element=>{
-    const{id,songname,artist,coverimg}=element;
-    let card=document.createElement('a');
+songs.forEach(element => {
+    const { id, songname, artist, coverimg } = element;
+    let card = document.createElement('a');
     card.classList.add('card');
-    card.href="#"+id;
-    card.innerHTML=`
+    card.href = "#" + id;
+    card.innerHTML = `
     <img src="${coverimg}" alt="">
                 <div class="search-detail">
                   <h4 class="search_music_name">${songname}</h4>
@@ -104,23 +104,27 @@ songs.forEach(element=>{
     search_result.appendChild(card);
 })
 
-let input=document.getElementsByTagName('input')[0];
-input.addEventListener('keyup',()=>{
-    let input_value=input.value.toUpperCase();
-    let items=search_result.getElementsByTagName('a');
+let input = document.getElementsByTagName('input')[0];
+input.addEventListener('keyup', () => {
+    let input_value = input.value.toUpperCase();
+    let items = search_result.getElementsByTagName('a');
 
     for (let index = 0; index < items.length; index++) {
         let as = items[index].getElementsByClassName('search_music_name')[0];
-        let text_value=as.innerHTML || as.innerText;
-        if (text_value.toUpperCase().indexOf(input_value)>-1) {
-            items[index].style.display="flex";
+        let text_value = as.innerHTML || as.innerText;
+        if (text_value.toUpperCase().indexOf(input_value) > -1) {
+            items[index].style.display = "flex";
+            document.getElementsByClassName('card')[index].addEventListener('click', () => {
+                document.getElementsByClassName('search_result')[0].style.display = "none";
+                input.value = "";
+            })
         } else {
             items[index].style.display = "none";
         }
-        if (input.value==0) {
-           search_result.style.display="none" 
+        if (input.value == 0) {
+            search_result.style.display = "none"
         } else {
-           search_result.style.display = ""
+            search_result.style.display = ""
         }
     }
 })
@@ -212,6 +216,8 @@ const shuffle_music = () => {
     document.getElementsByClassName('photo')[1].src = `Images/${songindex}.jpg`;
     currSongName[0].innerText = songs[songindex - 1].songname;
     currArtistName[0].innerText = songs[songindex - 1].artist;
+    currSongName[1].innerText = songs[songindex - 1].songname;
+    currArtistName[1].innerText = songs[songindex - 1].artist;
     rotation_img.classList.add('rotate');
     audioElement.play();
 }
