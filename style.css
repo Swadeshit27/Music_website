@@ -39,17 +39,18 @@ body.dark {
 
 
 body {
-    width: 100%;
-    height: 100vh;
+    /* width: 100%;
+    height: 100vh; */
     background-color: var(--text-color);
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .container {
     width: 90%;
-    height: 90%;
+    height: 90vh;
+    margin: 2rem auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -58,7 +59,7 @@ body {
 /* ========= navbar section start================= */
 .container .navbar {
     width: 20%;
-    height: 90%;
+    height: 80vh;
     background-image: var(--bg-nav-gradient);
 }
 
@@ -151,7 +152,7 @@ body {
 /* =========== Main section start========= */
 .container .main {
     width: 80%;
-    height: 90%;
+    height: 80vh;
     /* border: 2px solid red; */
     background-image: var(--bg-gradient);
     /* background: green; */
@@ -174,26 +175,83 @@ body {
 }
 
 .main .tools .search {
-    /* position: relative; */
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.main .tools .search-bar {
+    /* position: relative; */
+    width: 100%;
     padding: 1px 10px;
     border-radius: 20px;
     background: var(--search-col);
     /* border: 1px solid var(--bg-white); */
 }
 
-/* .main .tools .search::before {
-    content: '';
-    position: absolute;
-    left: 0;
+.main .tools .search_result {
     width: 100%;
-    height: 100%;
-    top: 0;
-    background: rgb(184, 184, 184, .1);
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-    z-index: -1;
-} */
+    height: 18rem;
+    /* background: rgb(120, 120, 120, .5); */
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 39px;
+    /* border-radius: 10px; */
+    overflow: auto;
+    scroll-behavior: smooth;
+    z-index: 999999;
+
+}
+
+.main .tools .search_result::-webkit-scrollbar {
+    display: none;
+}
+
+.main .tools .search_result .card {
+    width: 90%;
+    height: 3rem;
+    border-radius: 5px;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    margin: 0.5rem auto;
+    padding-left: 1rem;
+    background: var(--search-col);
+    display: none;
+}
+
+.main .tools .search_result .card img {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 0 1rem;
+}
+
+.main .tools .search_result .card .search-detail {
+    width: 60%;
+}
+
+.main .tools .search_result .card h4 {
+    font-size: 1.2rem;
+    width: 100%;
+    text-transform: capitalize;
+    color: var(--text-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.main .tools .search_result .card p {
+    font-size: .8rem;
+    text-transform: capitalize;
+    color: var(--text-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 .main .tools .search input {
     font-size: 1.3rem;
@@ -396,7 +454,7 @@ body {
 /* =========== palyer section ===========*/
 .container .player {
     width: 100%;
-    height: 10%;
+    height: 10vh;
     background: var(--outer-gradient);
     display: flex;
     flex-direction: row;
@@ -405,22 +463,35 @@ body {
     gap: 2rem;
 }
 
-/* ========player section================ */
-/* .main .player {
-    width: 100%;
-    height: 5rem; */
-/* background-color: var(--bg-white); */
-/* display: flex;
+.container .player .photo-name {
+    width: 20%;
+    display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 2rem;
-    gap: 2rem;
-} */
+}
 
 .container .player .photo {
     height: 50px;
     width: 50px;
     border-radius: 50%;
+}
+
+.container .player .music-name-artist {
+    margin-left: 1rem;
+    width: 74%;
+    text-transform: capitalize;
+}
+
+.container .player .music-name-artist h4,
+.container .player .music-name-artist p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--text-color);
+}
+
+.container .player .music-name-artist p {
+    font-size: 0.8rem;
 }
 
 .container .player .photo img {
@@ -430,10 +501,18 @@ body {
 }
 
 .container .player .control {
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.play-pause-repeat-vol {
+    width: 12%;
+}
+
+.control .player .control .time-bar {
+    width: 88%;
 }
 
 .container .player .control .fa-solid {
@@ -445,6 +524,10 @@ body {
 
 .repeat1 {
     display: none;
+}
+
+.repeat {
+    padding: 0 .5rem;
 }
 
 #soundbar {
@@ -466,11 +549,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90%;
 }
 
 .container .player .control .musicbar {
     position: relative;
-    min-width: 40vw;
+    min-width: 60%;
     height: 3px;
     border-radius: 2px;
     background-color: rgb(120, 120, 120, .5);
@@ -605,17 +689,27 @@ body {
     .main .tools .search {
         width: 55%;
     }
+
+    .container .player .music-name-artist {
+        width: 70%;
+    }
+
+    .container .player .control .musicbar {
+        min-width: 50%;
+    }
 }
 
 @media (max-width:1000px) {
     .container {
         width: 100%;
-        height: 100%;
+        height: 100vh;
+        margin: 0;
         transition: all 0.3s linear;
     }
 
     .container .navbar {
         width: 14rem;
+        height: 90vh;
         position: absolute;
         z-index: 999999;
         position: absolute;
@@ -628,12 +722,24 @@ body {
         top: 1rem;
         left: 21rem;
     }
+    .container .navbar .fa-solid {
+        color: var(--text-color);
+    }
 
-    .container .player .photo {
+    .container .player .photo-name {
         display: none;
     }
 
     .container .main {
+        width: 100%;
+        height: 90vh;
+    }
+
+    .container .player {
+        height: 10vh;
+    }
+
+    .container .player .control {
         width: 100%;
     }
 
@@ -641,10 +747,10 @@ body {
         width: 90%;
     }
 
-    .container .player .control .musicbar {
+    /* .container .player .control .musicbar {
         position: relative;
-        min-width: 50%;
-    }
+        min-width: 60%;
+    } */
 
     .main .display .featured #forward-arrow:hover,
     .main .display .featured #backward-arrow:hover {
@@ -668,12 +774,21 @@ body {
         top: 1rem;
         left: 21rem;
     } */
+    .container .navbar {
+        width: 14rem;
+        height: 82vh;
+    }
 
     .container .main {
         width: 100%;
-        height: 82%;
+        height: 82vh;
         transition: all 0.3s linear;
     }
+
+    .container .player {
+        height: 18vh;
+    }
+
 
     .main .display {
         width: 100%;
@@ -684,9 +799,6 @@ body {
         width: 75%;
     }
 
-    .container .player {
-        height: 18%;
-    }
 
     .container .player .control {
         display: flex;
@@ -759,6 +871,10 @@ body {
         gap: 1rem;
         padding: 0px 1rem;
         font-size: 1.2rem;
+    }
+
+    .main .tools .search_result .card {
+        padding-left: 0;
     }
 
     .main .tools .setting .fa,

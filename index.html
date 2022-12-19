@@ -19,7 +19,7 @@
     <div class="container">
       <!-- ========= navbar section start ============-->
       <div class="navbar" id="nav">
-        <div class="navbar-toggle" id="toggle" onclick="clicked()">
+        <div class="navbar-toggle toggle-btn fa-solid" id="toggle" onclick="clicked()">
           <span></span>
         </div>
         <div class="logo">
@@ -31,7 +31,7 @@
               <a href="#" class="fa fa-home home"><span>home</span></a>
             </li>
             <li class="items">
-              <a href="#" class="fa fa-search"><span>browse</span></a>
+              <a href="#search-bar" class="fa fa-search"><span>browse</span></a>
             </li>
             <li class="items">
               <a href="#" class="fa fa-microphone"> <span>radio</span></a>
@@ -73,14 +73,24 @@
         <!-- ========= tools section start ============-->
         <div class="tools">
           <div class="search">
-            <i class="fa fa-search"></i>
-            <input
-              type="text"
-              name="search"
-              class="search_bar"
-              placeholder="search for songs, artist etc....."
-            />
-            <!-- <button>submit</button> -->
+            <div class="search-bar">
+              <i class="fa fa-search"></i>
+              <input
+                type="text"
+                name="search"
+                class="search_bar"
+                placeholder="search for songs, artist etc....."
+              />
+            </div>
+            <a href="" class="search_result">
+              <!-- <div class="card">
+                <img src="Images/1.jpg" alt="">
+                <div class="search-detail">
+                  <h4 class="search_music_name">bandyaa</h4>
+                  <p>Arijit sing</p>
+                </div>
+              </div> -->
+            </a>
           </div>
           <div class="setting">
             <p class="fa fa-cog fa-spin"></p>
@@ -113,97 +123,103 @@
         <!-- ========= display section end ============-->
         <!-- ========= songs section start ============-->
         <div class="song-container">
-        <div class="songItems">
-          <div class="rest">
-            <img class="songItemplay" alt="" id="1" />
-            <h4 class="musicName">none</h4>
-            <p class="artist">by arijit sing</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="2" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by arijit sing</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="3" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="4" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="5" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="6" />
-            <h4 class="musicName">bandyaaakfkdlfdisfs</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="7" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="8" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="9" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="10" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="11" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="12" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="13" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="14" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
-          </div>
-          <div class="rest">
-            <img class="songItemplay" alt="" id="15" />
-            <h4 class="musicName">bandyaa</h4>
-            <p class="artist">by Armaan Malik</p>
+          <div class="songItems">
+            <div class="rest">
+              <img class="songItemplay" alt="" id="1" />
+              <h4 class="musicName">none</h4>
+              <p class="artist">by arijit sing</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="2" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by arijit sing</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="3" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="4" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="5" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="6" />
+              <h4 class="musicName">bandyaaakfkdlfdisfs</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="7" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="8" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="9" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="10" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="11" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="12" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="13" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="14" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
+            <div class="rest">
+              <img class="songItemplay" alt="" id="15" />
+              <h4 class="musicName">bandyaa</h4>
+              <p class="artist">by Armaan Malik</p>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-    
+
       <!-- ========= songs section end ============-->
       <!-- ========= play section start ============-->
       <div class="player">
-        <div class="photo" id="player_rotate">
-          <img class="photo" src="Images/1.jpg" alt="" />
+        <div class="photo-name">
+          <div class="photo" id="player_rotate">
+            <img class="photo" src="Images/1.jpg" alt="" />
+          </div>
+          <div class="music-name-artist">
+            <h4 class="currSongName">bandyaa</h4>
+            <p class="currArtistName">by Arijit sing</p>
+          </div>
         </div>
 
         <div class="control">
           <div class="play-pause-repeat-vol">
             <div class="repeat1">
-              <i class="fa-solid repeat fa-repeat" id="repeat-icon2"></i>
+              <i class="fa-solid repeat fa-music" id="repeat-icon2"></i>
             </div>
             <div class="play-pause-for-back">
               <i class="fa-solid fa-backward-step" id="previous"></i>
@@ -241,7 +257,7 @@
               <div class="dot"></div>
             </div>
             <p class="totaltime">5.30</p>
-            <i class="fa-solid repeat fa-repeat" id="repeat-icon1"></i>
+            <i class="fa-solid repeat fa-music" id="repeat-icon1"></i>
             <!-- </div> -->
             <div class="vol-sound" id="soundbar2">
               <i class="fa-solid fa-volume-high" id="vol_icon"></i>
