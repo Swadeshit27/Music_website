@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🎵 Song website</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
+    <link rel="stylesheet" href="Resonsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2ongItemplay/css/all.min.css"
-    />
+    /> -->
   </head>
+
   <body>
     <div class="container">
       <!-- ========= navbar section start ============-->
@@ -28,7 +28,7 @@
         <div class="all">
           <ul class="top">
             <li class="items">
-              <a href="#" class="fa fa-home home"><span>home</span></a>
+              <a href="#home" class="fa fa-home home"><span>home</span></a>
             </li>
             <li class="items">
               <a href="#search-bar" class="fa fa-search"><span>browse</span></a>
@@ -40,27 +40,25 @@
           <ul class="library">
             <h3>your library</h3>
             <li class="items">
-              <a href="#" class="fa fa-regular fa-clock"
-                ><span>recently played</span></a
-              >
+              <a href="#" class="fa fa-regular fa-clock"><span>recently played</span></a>
             </li>
             <li class="items">
-              <a href="#" class="fa fa-heart"><span>favorite songs</span></a>
+              <a href="#favorite" class="fa fa-heart"><span>favorite songs</span></a>
             </li>
             <li class="items">
               <a href="#" class="fa fa-user"> <span>artist</span></a>
             </li>
             <li class="items">
-              <a href="#" class="fa fa-regular fa-list"> <span>albums</span></a>
+              <a href="#album" class="fa fa-list"> <span>albums</span></a>
             </li>
           </ul>
           <ul class="playlist">
             <h3>playlist</h3>
             <li class="items">
-              <a href="#" class="fa fa-music"><span>hindi top 50</span></a>
+              <a href="#hindi" class="fa fa-music"><span>hindi top 50</span></a>
             </li>
             <li class="items">
-              <a href="#" class="fa fa-music"><span>bengali top 50</span></a>
+              <a href="#bengali" class="fa fa-music"><span>bengali top 50</span></a>
             </li>
             <li class="items">
               <a href="#" class="fa fa-music"><span>romantic songs</span></a>
@@ -72,15 +70,11 @@
       <div class="main">
         <!-- ========= tools section start ============-->
         <div class="tools">
+          <div class="nothing"></div>
           <div class="search">
             <div class="search-bar">
               <i class="fa fa-search"></i>
-              <input
-                type="text"
-                name="search"
-                class="search_bar"
-                placeholder="search for songs, artist etc....."
-              />
+              <input type="text" name="search" class="search_bar" placeholder="search for songs, artist etc....." />
             </div>
             <a href="" class="search_result">
               <!-- <div class="card">
@@ -94,195 +88,996 @@
           </div>
           <div class="setting">
             <p class="fa fa-cog fa-spin"></p>
-          </div>
-          <!-- <div class="notification">
-                <p class="fa fa-notice"></p>
-            </div> -->
-          <div class="mode">
-            <i class="fas"></i>
+            <!-- </div> -->
+            <div class="mode">
+              <i class="fas"></i>
+            </div>
           </div>
         </div>
         <!-- ========= tools section end ============-->
-        <!-- ========= display section start ============-->
-        <div class="display">
-          <div class="main-song">
-            <img class="none" id="rotation" src="Images/1.jpg" alt="" />
-            <h3 class="currSongName">bandyea</h3>
-            <p class="currArtistName">by arijit sing</p>
-          </div>
-          <div class="featured">
-            <div class="header">
-              <h3>favorite songs</h3>
+        <div class="mainsong_container">
+          <!-- ========= display section start ============-->
+          <h2 class="greeting">Good Morning</h2>
+          <div class="display" id="home">
+            <div class="main-song">
+              <img class="song_img" id="rotation" src="https://tse4.mm.bing.net/th?id=OVP.Cgq5rGWBZEJjnAUKI8HFZgHgFo&pid=Api&w=296&h=156&c=7&p=0" alt="" />
+              <h3 class="currSongName">Agomonir Gaan (আগমনীর গান)</h3>
+              <p class="currArtistName">by Anupam Roy</p>
             </div>
-            <div class="forward-backword">
-              <i class="fas fa-arrow-circle-left" id="backward-arrow"></i>
-              <i class="fas fa-arrow-circle-right" id="forward-arrow"></i>
-            </div>
-          </div>
-        </div>
-        <!-- ========= display section end ============-->
-        <!-- ========= songs section start ============-->
-        <div class="song-container">
-          <div class="songItems">
-            <div class="rest">
-              <img class="songItemplay" alt="" id="1" />
-              <h4 class="musicName">none</h4>
-              <p class="artist">by arijit sing</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="2" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by arijit sing</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="3" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="4" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="5" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="6" />
-              <h4 class="musicName">bandyaaakfkdlfdisfs</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="7" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="8" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="9" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="10" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="11" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="12" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="13" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="14" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
-            </div>
-            <div class="rest">
-              <img class="songItemplay" alt="" id="15" />
-              <h4 class="musicName">bandyaa</h4>
-              <p class="artist">by Armaan Malik</p>
+            <div class="main-song_forbig_display">
+              <div class="bigdis_img">
+                <!-- <i class="fa-regular fa-circle-play dis_paly_btn"></i> -->
+                <img src="Images/711.gif" alt="animation" class="dis_animated_img">
+                <img class="song_img photo" src="https://tse4.mm.bing.net/th?id=OVP.Cgq5rGWBZEJjnAUKI8HFZgHgFo&pid=Api&w=296&h=156&c=7&p=0" alt="" />
+              </div>
+              <div class="details">
+                <h3 class="currSongName">Agomonir Gaan (আগমনীর গান)</h3>
+                <p class="currArtistName">by Anupam Roy</p>
+                <div class="dis_icons">
+                  <div class="box previous"><i class="fa-solid fa-backward-step previous"></i></div>
+                  <div class="box "><i class=" fa-solid fa-heart"></i></div>
+                  <div class="box next"><i class="fa-solid fa-forward-step "></i></div>
+                </div>
+              </div>
+              <div class="bigdis_artistImg">
+                <img src="https://fankaronline.com/content/uploads/2019/07/Arijit-Singh.png" alt="arijit">
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+          <!-- ========= display section end ============-->
+          <!-- ========= songs section start ============-->
+          <div class="song_main_container">
+            <div class="song-container" id="favorite">
+              <div class="featured">
+                <div class="header">
+                  <h3>favorite songs</h3>
+                </div>
+                <div class="forward-backword">
+                  <i class="fas fa-arrow-circle-left " id="backward-arrow"></i>
+                  <i class="fas fa-arrow-circle-right" id="forward-arrow"></i>
+                </div>
+              </div>
+              <div class="song_subcontainer">
+                <div class="songItems">
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="1"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="2"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="3"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="4"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="5"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="6"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="7"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="8"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="9"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="10"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="11"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="12"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="13"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="14"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="15"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="16"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="17"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="18"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="19"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="20"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="21"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="22"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="23"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="24"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="25"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="26"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="27"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="28"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="29"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <!-- <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="30"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="song-container" id="hindi">
+              <div class="featured">
+                <div class="header">
+                  <h3>hindi songs</h3>
+                </div>
+                <div class="forward-backword">
+                  <i class="fas fa-arrow-circle-left" id="backward-arrow2"></i>
+                  <i class="fas fa-arrow-circle-right" id="forward-arrow2"></i>
+                </div>
+              </div>
+              <div class="song_subcontainer">
+                <div class="songItems ">
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="30"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="31"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="32"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="33"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="34"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="35"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="36"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="37"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="38"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="39"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="40"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="41"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="42"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="43"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="44"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="45"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="46"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="47"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="48"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="49"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="50"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="51"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="52"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="53"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="54"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="55"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="56"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="57"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="58"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="59"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="60"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="song-container" id="bengali">
+              <div class="featured">
+                <div class="header">
+                  <h3>bengali songs</h3>
+                </div>
+                <div class="forward-backword">
+                  <i class="fas fa-arrow-circle-left " id="backward-arrow"></i>
+                  <i class="fas fa-arrow-circle-right" id="forward-arrow"></i>
+                </div>
+              </div>
+              <div class="song_subcontainer">
+                <div class="songItems">
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="61"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="62"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="63"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="64"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="65"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="66"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="67"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="68"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="69"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="70"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="71"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="72"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="73"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="74"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="75"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="76"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="77"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="78"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="79"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="80"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="81"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="82"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="83"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="84"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="85"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="86"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="87"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="88"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="89"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class="rest">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="90"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="song-container" id="album">
+              <div class="featured">
+                <div class="header">
+                  <h3>Album songs</h3>
+                </div>
+                <div class="forward-backword">
+                  <i class="fas fa-arrow-circle-left" id="backward-arrow3"></i>
+                  <i class="fas fa-arrow-circle-right" id="forward-arrow3"></i>
+                </div>
+              </div>
+              <div class="song_subcontainer">
+                <div class="songItems ">
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="91"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="92"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="93"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="94"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="95"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="96"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="97"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="98"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="99"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
+                  <div class=" rest rest2">
+                    <div class="song_img">
+                      <i class="fa fa-play-circle play_btn" id="100"></i>
+                      <img class="songItemplay" alt="" />
+                    </div>
+                    <h4 class="musicName">none</h4>
+                    <p class="artist">by arijit sing</p>
+                  </div>
 
-      <!-- ========= songs section end ============-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========= songs section end ============-->
+      </div>
       <!-- ========= play section start ============-->
+      <div class="allplayersongs">
+        <a href="" class="allsongs">
+          <!-- <div class="song_card">
+                      <img src="Images/1.jpg" alt="">
+                      <div class="songs_details">
+                        <h4 class="songs_name">bandyaa</h4>
+                        <p>Arijit sing</p>
+                      </div> 
+                    <i class="fa-solid fa-circle-play song_palyer_btn"></i>
+                    </div>-->
+        </a>
+      </div>
       <div class="player">
         <div class="photo-name">
           <div class="photo" id="player_rotate">
-            <img class="photo" src="Images/1.jpg" alt="" />
+            <img class="photo song_img Player_song_img" src="https://tse4.mm.bing.net/th?id=OVP.Cgq5rGWBZEJjnAUKI8HFZgHgFo&pid=Api&w=296&h=156&c=7&p=0"
+              alt="" />
           </div>
           <div class="music-name-artist">
-            <h4 class="currSongName">bandyaa</h4>
-            <p class="currArtistName">by Arijit sing</p>
+            <h4 class="currSongName">Agomonir Gaan (আগমনীর গান)</h4>
+            <p class="currArtistName">by Anupam Roy</p>
           </div>
         </div>
 
         <div class="control">
-          <div class="play-pause-repeat-vol">
-            <div class="repeat1">
-              <i class="fa-solid repeat fa-music" id="repeat-icon2"></i>
-            </div>
-            <div class="play-pause-for-back">
-              <i class="fa-solid fa-backward-step" id="previous"></i>
-              <i class="fa-solid fa-circle-play" id="play_btn"></i>
-              <i class="fa-solid fa-forward-step" id="next"></i>
-            </div>
-            <div class="vol-sound" id="soundbar">
-              <i class="fa-solid fa-volume-high" id="vol_icon"></i>
-              <div class="soundbar">
-                <input
-                  type="range"
-                  name="progress"
-                  id="vol"
-                  min="0"
-                  value="0"
-                  max="100"
-                />
-                <div class="bar3"></div>
-                <div class="dot1"></div>
-              </div>
-            </div>
+          <div class="play-pause-for-back">
+            <i class="fa-solid fa-backward-step previous" id="previous"></i>
+            <i class="fa-solid fa-circle-play" id="play_btn" id="1"></i>
+            <i class="fa-solid fa-forward-step next" id="next"></i>
           </div>
           <div class="time-bar">
             <p class="currtime">0.00</p>
             <div class="musicbar">
-              <input
-                type="range"
-                name="progress"
-                id="mybar"
-                min="0"
-                value="0"
-                max="100"
-              />
+              <input type="range" name="progress" id="mybar" min="0" value="0" max="100" />
               <div class="bar2"></div>
               <div class="dot"></div>
             </div>
             <p class="totaltime">5.30</p>
-            <i class="fa-solid repeat fa-music" id="repeat-icon1"></i>
-            <!-- </div> -->
-            <div class="vol-sound" id="soundbar2">
-              <i class="fa-solid fa-volume-high" id="vol_icon"></i>
-              <div class="soundbar">
-                <input
-                  type="range"
-                  name="progress"
-                  id="vol"
-                  min="0"
-                  value="0"
-                  max="100"
-                />
+          </div>
+        </div>
+        <div class="vol_list">
+          <i class="fa-solid fa-music " id="repeat"></i>
+          <div class="vol-sound" id="soundbar2">
+            <i class="fa-solid fa-volume-high" id="vol_icon"></i>
+            <div class="soundbar">
+              <div class="vol_progress_bar">
+                <input type="range" name="progress" id="vol" min="0" value="100" max="90" />
                 <div class="bar3"></div>
                 <div class="dot1"></div>
               </div>
             </div>
           </div>
+          <!-- <div class="allplayersongs">
+            <a href="" class="allsongs"> -->
+          <!-- <div class="song_card">
+                <img src="Images/1.jpg" alt="">
+                <div class="songs_details">
+                  <h4 class="songs_name">bandyaa</h4>
+                  <p>Arijit sing</p>
+                </div> 
+              <i class="fa-solid fa-circle-play song_palyer_btn"></i>
+              </div>-->
+          <!-- </a>
+          </div> -->
+          <i class="fa-solid fa-list-ul allmusic_list"></i>
         </div>
       </div>
-      <!-- ========= play section end ============-->
     </div>
-    <script
-      src="https://kit.fontawesome.com/1a8bb9f0cc.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- ========= play section end ============-->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a8bb9f0cc.js" crossorigin="anonymous"></script>
+    <!-- <script src="index.js"></script> -->
     <script src="index.js"></script>
+    <script src="NavbarToggle.js"></script>
+    <script src="dark_light_mode.js"></script>
   </body>
+
 </html>

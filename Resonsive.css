@@ -1,0 +1,142 @@
+/* * {
+  transition: all 0.3s ease-in-out;
+} */
+@media (max-width: 1300px) {
+  .container .navbar {
+    transition: all 0.3s ease-in-out;
+    width: 25%;
+  }
+  .container .main {
+    transition: all 0.3s ease-in-out;
+    width: 75%;
+  }
+  .details {
+    width: 35%;
+  }
+}
+@media (max-width: 1000px) {
+  .container .navbar {
+    width: 20rem;
+    position: absolute;
+    z-index: 99999;
+    left: -20rem;
+  }
+  .container .navbar-toggle {
+    position: absolute;
+    top: 0.8rem;
+    left: 21rem;
+    display: flex;
+    opacity: 1;
+  }
+  .container .main {
+    width: 100%;
+  }
+  .container .player .photo-name {
+    display: none;
+  }
+  .container .player .control {
+    width: 80%;
+  }
+  .main .tools .search_result .card {
+    padding-left: 0rem;
+  }
+}
+@media (max-width: 800px) {
+  .container .navbar {
+    height: 80vh;
+  }
+  .container .main {
+    height: 80vh;
+  }
+  .main .tools .search {
+    transition: all 0.3s ease-in-out;
+    width: 70%;
+  }
+  .container .player {
+    transition: all 0.3s ease-in-out;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .container .player .control {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .container .player .control .play-pause-for-back {
+    margin-top: 1rem;
+  }
+  i#repeat {
+    position: absolute;
+    left: 5rem;
+    top: 5.5rem;
+  }
+  i.fa-solid.fa-list-ul {
+    position: absolute;
+    right: 6rem;
+    top: 5.5rem;
+  }
+  #soundbar2 {
+    display: none;
+  }
+  .container .player .control #play_btn {
+    font-size: 3rem;
+  }
+  .container .player .control .fa-solid {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  .container .navbar .all {
+    height: 60vh;
+  }
+  .mainsong_container {
+    height: 72vh;
+  }
+  .main .tools .setting {
+    margin-right: 1rem;
+  }
+  .main .display .main-song h3 {
+    width: 200px;
+    padding: 0;
+    font-size: 1.3rem;
+  }
+  .main .display .main-song {
+    height: 200px;
+    width: 200px;
+    margin: 1rem auto;
+  }
+  .main .display .main-song p {
+    width: 200px;
+    font-size: 1rem;
+  }
+  .main .display {
+    align-items: start;
+  }
+  .main-song_forbig_display {
+    display: none;
+  }
+  .main .display .main-song {
+    display: table-footer-group;
+  }
+  /* .allplayersongs {
+    position: absolute;
+    height: 72vh;
+    bottom: 139px;
+    right: 0rem;
+  } */
+}
+@media (max-width: 500px) {
+  i#repeat {
+    left: 3rem;
+  }
+  i.fa-solid.fa-list-ul {
+    right: 3rem;
+  }
+  .main .song-container .header {
+    font-size: 1.5rem;
+  }
+}
